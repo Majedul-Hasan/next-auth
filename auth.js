@@ -5,6 +5,8 @@ import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from 'next-auth/providers/credentials';
 import mongoClientPromise from './lib/mongoClinetPromise';
 import { MongoDBAdapter } from '@auth/mongodb-adapter';
+import { dbConnect } from './lib/mongo';
+import { userModel } from './models/user-model';
 
 export const {
   handlers: { GET, POST },
